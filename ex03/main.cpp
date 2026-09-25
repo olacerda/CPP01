@@ -5,14 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 02:01:39 by otlacerd          #+#    #+#             */
-/*   Updated: 2026/09/24 18:53:55 by otlacerd         ###   ########.fr       */
+/*   Created: 2026/09/24 19:18:37 by otlacerd          #+#    #+#             */
+/*   Updated: 2026/09/24 22:30:35 by otlacerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+#include "Weapon.hpp"
 
-int	main(void)
+int main()
 {
-	delete[] zombieHorde(10, "Just a normal test");
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	return 0;
 }

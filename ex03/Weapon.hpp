@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 02:01:39 by otlacerd          #+#    #+#             */
-/*   Updated: 2026/09/24 18:53:55 by otlacerd         ###   ########.fr       */
+/*   Created: 2026/09/24 19:19:05 by otlacerd          #+#    #+#             */
+/*   Updated: 2026/09/24 20:50:20 by otlacerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-int	main(void)
+# include <iostream>
+
+class Weapon
 {
-	delete[] zombieHorde(10, "Just a normal test");
-}
+	private:
+		std::string type;
+
+	public:
+		Weapon(std::string new_value);
+		const	std::string& getType();
+		void	setType(std::string new_value);
+};
+
+#endif
+

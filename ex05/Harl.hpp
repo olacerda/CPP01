@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 02:01:39 by otlacerd          #+#    #+#             */
-/*   Updated: 2026/09/24 18:53:55 by otlacerd         ###   ########.fr       */
+/*   Created: 2026/09/25 00:25:57 by otlacerd          #+#    #+#             */
+/*   Updated: 2026/09/25 01:15:12 by otlacerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int	main(void)
+# include <iostream>
+
+class Harl
 {
-	delete[] zombieHorde(10, "Just a normal test");
-}
+	private:
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
+		void	(Harl::*methods[4])(void);
+
+	public:
+		Harl();
+		void	complain(std::string level);
+};
+
+#endif

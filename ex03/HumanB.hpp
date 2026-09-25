@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 02:01:39 by otlacerd          #+#    #+#             */
-/*   Updated: 2026/09/24 18:53:55 by otlacerd         ###   ########.fr       */
+/*   Created: 2026/09/24 19:19:37 by otlacerd          #+#    #+#             */
+/*   Updated: 2026/09/24 22:42:05 by otlacerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-int	main(void)
+# include <iostream>
+# include "Weapon.hpp"
+
+class HumanB
 {
-	delete[] zombieHorde(10, "Just a normal test");
-}
+	private:
+		Weapon		*weapon;
+		std::string	name;
+
+	public:
+		HumanB(std::string name);
+		void	setWeapon(Weapon& new_weapon);
+		void	attack();
+};
+#endif

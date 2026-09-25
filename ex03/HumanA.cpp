@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 02:01:39 by otlacerd          #+#    #+#             */
-/*   Updated: 2026/09/24 18:53:55 by otlacerd         ###   ########.fr       */
+/*   Created: 2026/09/24 19:19:44 by otlacerd          #+#    #+#             */
+/*   Updated: 2026/09/24 22:43:35 by otlacerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
+#include "Weapon.hpp"
 
-int	main(void)
+HumanA::HumanA(std::string new_name, Weapon &weapon)
+	: weapon(weapon)
 {
-	delete[] zombieHorde(10, "Just a normal test");
+	this->name = new_name;
+	this->weapon.setType("Club");
+}
+
+void	HumanA::attack()
+{
+	std::cout << this->name << " atacks with their " << this->weapon.getType() << "\n";
 }

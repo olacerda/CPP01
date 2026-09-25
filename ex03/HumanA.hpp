@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 02:01:39 by otlacerd          #+#    #+#             */
-/*   Updated: 2026/09/24 18:53:55 by otlacerd         ###   ########.fr       */
+/*   Created: 2026/09/24 19:19:29 by otlacerd          #+#    #+#             */
+/*   Updated: 2026/09/24 22:08:54 by otlacerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-int	main(void)
+# include <iostream>
+# include "Weapon.hpp"
+
+class HumanA
 {
-	delete[] zombieHorde(10, "Just a normal test");
-}
+	private:
+		Weapon		&weapon;
+		std::string	name;
+
+	public:
+		HumanA(std::string new_name, Weapon &weapon);
+		void	attack();
+};
+
+#endif
