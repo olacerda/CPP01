@@ -6,7 +6,7 @@
 /*   By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 23:20:25 by otlacerd          #+#    #+#             */
-/*   Updated: 2026/09/25 00:20:50 by otlacerd         ###   ########.fr       */
+/*   Updated: 2026/10/25 23:08:03 by otlacerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ void	switch_occurrences(std::string& line, std::string to_find, std::string repl
 {
 	std::string::size_type pos;
 
-	while ((pos = line.find(to_find)) != std::string::npos)
+	pos = 0;
+	while ((pos = line.find(to_find, pos)) != std::string::npos)
 	{
 		line.erase(pos, to_find.length());
 		line.insert(pos, replacement);
+		pos += replacement.length();
 	}
 }
 

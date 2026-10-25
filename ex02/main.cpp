@@ -6,7 +6,7 @@
 /*   By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 18:57:02 by otlacerd          #+#    #+#             */
-/*   Updated: 2026/09/24 19:14:46 by otlacerd         ###   ########.fr       */
+/*   Updated: 2026/10/25 22:54:31 by otlacerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	main(void)
 
 	std::cout << str << "\n";
 	std::cout << *stringPTR << "\n";
-	std::cout << stringREF << "\n";
+	std::cout << stringREF << std::endl;
 }

@@ -6,7 +6,7 @@
 #    By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/24 22:44:42 by otlacerd          #+#    #+#              #
-#    Updated: 2026/09/25 00:11:14 by otlacerd         ###   ########.fr        #
+#    Updated: 2026/10/25 23:05:13 by otlacerd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f result.replace
 
 re: fclean all
 

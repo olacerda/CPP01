@@ -6,7 +6,7 @@
 /*   By: otlacerd <otlacerd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 22:46:26 by otlacerd          #+#    #+#             */
-/*   Updated: 2026/09/25 00:19:11 by otlacerd         ###   ########.fr       */
+/*   Updated: 2026/10/25 22:57:52 by otlacerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char *argv[])
 	std::ifstream file_to_read(argv[1]);
 	if (!file_to_read.is_open())
 	{
-		std::cout << "File: " << argv[1] << "couldnt be opened\n" << std::endl;
+		std::cout << "File: " << argv[1] << " couldnt be opened\n" << std::endl;
 		return 1;
 	}
 	std::ofstream file_to_write("result.replace");
